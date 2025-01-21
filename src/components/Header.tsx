@@ -7,7 +7,7 @@ import { IoPersonCircleOutline, IoCartOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import { RootState } from "../redux/store";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

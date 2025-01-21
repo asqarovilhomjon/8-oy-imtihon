@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, updateQuantity, clearCart } from '@/redux/slice/cartSlice';
+import { removeFromCart, updateQuantity } from '../../redux/slice/cartSlice';
 import { useNavigate } from 'react-router-dom';
-import { RootState } from '@/redux/store';
+import { RootState } from '../../redux/store';
 import { MdDelete } from "react-icons/md";
 import Empty from '@/assets/images/empty-box.png';
 

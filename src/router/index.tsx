@@ -1,9 +1,9 @@
-import Cart from '@/pages/Cart/Cart'
-import CheckOut from '@/pages/CheckOut/CheckOut'
-import Detail from '@/pages/Detail/Detail'
-import Home from '@/pages/Home/Home'
-import Layout from '@/pages/Layout/Layout'
-import NotFound from '@/pages/NotFound/NotFound'
+import Cart from '../pages/Cart/Cart'
+import CheckOut from '../pages/CheckOut/CheckOut'
+import Detail from '../pages/Detail/Detail'
+import Home from '../pages/Home/Home'
+import Layout from '../pages/Layout/Layout'
+import NotFound from '../pages/NotFound/NotFound'
 import { Route, Routes } from 'react-router-dom'
 
 const Router = () => {

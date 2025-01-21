@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Product } from "@/types";
+import { Product } from "../types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Rating } from "@mui/material";
@@ -84,7 +84,7 @@ const Products: React.FC = () => {
             </div>
           ))}
         </div>
-        {visibleProductsCount < products.length && (
+        {visibleProductsCount < Products.length && (
           <div className="flex justify-center mt-[32px]">
             <button
               onClick={handleSeeMore}

@@ -5,8 +5,8 @@ import { Rating } from "@mui/material";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { addToCart } from "@/redux/slice/cartSlice";
-import YouTube from "@/components/Loading";
+import { addToCart } from "../../redux/slice/cartSlice";
+import YouTube from "../../components/Loading";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material";
 import Comments from "../../components/Comments";
 
@@ -227,10 +227,10 @@ const Detail: React.FC = () => {
             precision={0.5}
           />
         </DialogContent>
-        <DialogActions>
+        <DialogActions className="#fff">
           <Button onClick={() => setIsModalOpen(false)}>Cancel</Button>
-          <Button onClick={handleAddComment} variant="contained" color="primary">
-            Submit
+          <Button onClick={handleAddComment} variant="contained" className="bg-black">
+            <span>Submit</span>
           </Button>
         </DialogActions>
       </Dialog>

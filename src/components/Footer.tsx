@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import payment from "@/assets/images/payments.svg";
-import Stay from "@/components/Stay";
+import Stay from "../components/Stay";
 
 const Footer = () => {
   return (

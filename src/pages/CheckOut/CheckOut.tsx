@@ -1,9 +1,9 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "@/redux/slice/cartSlice"; 
-import { RootState } from "@/redux/store"; 
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { clearCart } from "../../redux/slice/cartSlice"; 
+import { RootState } from "../../redux/store"; 
+import { useNavigate } from "react-router-dom";
 
 const BOT_TOKEN = "yfcghgvkjh";
 const CHAT_ID = 9848654984;
@@ -26,7 +26,7 @@ interface FormData {
 const Baskets: React.FC = () => {
   const cart: CartItem[] = useSelector((state: RootState) => state.cart.items);
   const dispatch = useDispatch();
-  const navigate = useNavigate(); // Initialize navigate hook
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
@@ -67,7 +67,7 @@ const Baskets: React.FC = () => {
     });
 
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    text += `<strong>Total price: ${totalPrice} сум</strong>%0A`;
+    text += `<strong>Total price: ${totalPrice} $</strong>%0A`;
 
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${text}&parse_mode=html`;
 
@@ -83,7 +83,7 @@ const Baskets: React.FC = () => {
           comments: "",
         });
         dispatch(clearCart());
-        navigate("/cart"); // Navigate to the cart page after order is placed
+        navigate("/cart");
       } else {
         throw new Error("Failed to send order");
       }

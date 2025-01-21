@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import { Product } from "../types";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Rating } from "@mui/material";
